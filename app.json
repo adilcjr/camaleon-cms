@@ -1,0 +1,21 @@
+{
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": { },
+  "formation": {
+  },
+  "name": "camaleon-cms",
+  "scripts": {
+    "postdeploy": "rails db:migrate db:seed"
+  },
+  "stack": "heroku-18"
+}

@@ -1,0 +1,24 @@
+version: '3.5'
+services:
+  db:
+    container_name: camaleon-db
+    image: postgres:10.5
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: postgres 
+    ports: ["5432:5432"]
+    expose: ["5432"]
+
+  web:
+    container_name: camaleon-web
+    build: .
+    command: bash -c "while [ true ]; do sleep 10; done"
+    environment: 
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=postgres
+    volumes:
+      - .:/camaleon-cms
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
