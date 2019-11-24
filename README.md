@@ -16,6 +16,7 @@ http://localhost:3000
 
 ### Entering in Admin area:
 
-http://localhost:3000/admin.
-login: admin.
-password admin123.
+http://localhost:3000/admin
+
+login: admin
+password admin123
