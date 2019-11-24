@@ -18,5 +18,4 @@ http://localhost:3000
 
 http://localhost:3000/admin
 
-login: admin
-password admin123
+login: admin / password: admin123
